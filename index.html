@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/23d10ae737.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- hero section  -->
+    <nav>
+        <div class="logo">
+            <a href="./index.html"><img src="./images/TIMELESS LOGO.png" alt="timeless logo"></a>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#category">Categories</a></li>
+                <li><a href="#new-arivals">New Arrivals</a></li>
+                <li><a href="#brands">Brands</a></li>
+                <li><a href="#about">About</a></li>
+                <i class="fa-solid fa-magnifying-glass search-icon" onclick="toggleSearchMenu()"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- -----------search ---------------  -->
+    <div class="search-container">
+        <div id="search-menu" class="search-menu">
+          <input type="text" id="search-box" placeholder="Search..." oninput="filterSuggestions()" />
+          <ul id="suggestions">
+            <li>Bomber jackets</li>
+            <li>Shorts</li>
+            <li>Hoodies</li>
+            <li>Sweatpants</li>
+            <li>Joggers</li>
+            <li>Cross bags</li>
+            <li>Slides</li>
+            <li>Sneakers</li>
+          </ul>
+        </div>
+      </div>
+    <!--------------- header section  --------------------->
+
+    <div id="header">
+        <img src="./images/image1.png" alt="Timeless logo" class="header-img">
+        <div class="header-content">
+            <h1 class="time">TIMELESS</h1>
+            <a href="./explore.html" class="btn">Explore<i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!--------------------- categories  ---------------->
+    <div class="container">
+        <div id="category">
+            <h1 class="title">Categories</h1>
+            <div class="category-buttons">
+                <button data-category="men" class="active">Men</button>
+                <button data-category="women">Women</button>
+                <button data-category="kids">Kids</button>
+            </div>
+
+            <div class="category-content">
+                <div class="category" id="men" style="left: 0;">
+                    <img src="./images/MEN 1.jpg" alt="Men 1">
+                    <img src="./images/MEN 2.jpg" alt="Men 2">
+                    <img src="./images/MEN 3.jpg" alt="Men 3">
+                    <img src="./images/MEN 4.jpg" alt="Men 4">
+                    <img src="./images/MEN 5.jpg" alt="Men 5">
+                    <img src="./images/MEN 6.jpg" alt="Men 6">
+                </div>
+                <div class="category" id="women" style="left: 100%;">
+                    <img src="./images/WOMEN 1.jpg" alt="Women 1">
+                    <img src="./images/WOMEN 2.jpg" alt="Women 2">
+                    <img src="./images/WOMEN 3.jpg" alt="Women 3">
+                    <img src="./images/WOMEN 4.jpg" alt="Women 4">
+                    <img src="./images/WOMEN 5.jpg" alt="Women 5">
+                    <img src="./images/WOMEN 6.jpg" alt="Women 6">
+                </div>
+                <div class="category" id="kids" style="left: 200%;">
+                    <img src="./images/KID 1.jpg" alt="Kids 1">
+                    <img src="./images/KID 2.jpg" alt="Kids 2">
+                    <img src="./images/KID 3.jpg" alt="Kids 3">
+                    <img src="./images/KID 4.jpg" alt="Kids 4">
+                    <img src="./images/KID 5.jpg" alt="Kids 5">
+                    <img src="./images/KID 6.jpg" alt="Kids 6">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------new arrivals --------------------------  -->
+    <div class="container">
+        <div id="new-arivals">
+            <h1 class="title">New Arrivals</h1>
+
+            <div class="arrival-list">
+                <div class="arrival-image">
+                    <img src="./images/ARRIVAL 1.jpg" alt="Arrival 1">
+                    <div class="layer">
+                        <p>Tech Wear</p>
+                    </div>
+                </div>
+                <div class="arrival-image">
+                    <img src="./images/ARRIVAL 2.jpg" alt="Arrival 1">
+                    <div class="layer">
+                        <p>Winter <br>Collection</p>
+                    </div>
+                </div>
+                <div class="arrival-image">
+                    <img src="./images/ARRIVAL 3.jpg" alt="Arrival 1">
+                    <div class="layer">
+                        <p>Timeless <br>Exclusive</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------brands page ------------------  -->
+    <div class="container">
+        <div id="brands">
+            <h1 class="title">Brands</h1>
+            
+            <div class="brand-left">
+                <div class="brand-left1">
+                    <img src="./images/BRAND 1.jpg" alt="" class="brand-image brand-image1">
+                    <h1>PURE <br><span>AURA</span></h1>
+                    <p>Experience the art of dressing in white <br>where less becomes infinitely more</p>
+                </div>
+    
+                <div class="brand-left2">
+                    <img src="./images/BRAND 2.jpg" alt="" class="brand-image brand-image2">
+                    <h1>IVORY <br> <span>EDGE</span></h1>
+                    <p>A lifestyle statement that <br> redefines boundaries</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="brand-right">
+            <div class="brand-left1">
+                <img src="./images/BRAND 3.jpg" alt="" class="brand-image brand-image1">
+                <h1>SOLSTICE <br><span>STUDIO</span></h1>
+                <p>Embrace your inner calm while <br>looking effortlessly polished</p>
+            </div>
+
+            <div class="brand-left2">
+                <img src="./images/BRAND 4.jpg" alt="" class="brand-image brand-image2">
+                <h1>LUNAR <br> <span>THREAD</span></h1>
+                <p>Ensure you shine in every moment</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="container">
+        <div id="about">
+            <h1 class="title">About</h1>
+
+            <div class="about-content">
+                <img src="./images/about image.jpg" alt="">
+                <div class="about-right">
+                    <p class="p-about">Timeless is a new york-based fashion brand that merges classic elegance with modern designs. Inspired by the city's vibrant energy, it offers versatile, high-quality pieces crafted to outline trends and celebrate enduring style.</p>
+                    <p class="address">Address: 245 Lexington Avenue, Suite 120 NewYork, USA.</p>
+                </div>   
+            </div>
+
+            <div class="about-bottom">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+
+            <div class="copyright">
+                <p><i class="fa-regular fa-copyright"></i> Copyright @EDIM & AKUDAMA 2024</p>
+            </div>
+        </div>
+    </div>
+
+
+
+<script src="./script.js"></script>
+</body>
+</html>
