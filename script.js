@@ -52,12 +52,9 @@ function toggleSearchMenu() {
         suggestion.style.display = 'none';
       }
     });
-  }
-  
-  const menuToggle = document.getElementById('mobile-menu');
-  const navList = document.getElementById('nav-list');
-  
-  // Toggle the menu on click
-  menuToggle.addEventListener('click', () => {
-      navList.classList.toggle('active');
-  });
+}
+
+function toggleMenu() {
+  const navList = document.querySelector('.nav-list');
+  navList.classList.toggle('active'); // Toggle 'active' class
+}

@@ -19,7 +19,7 @@ nav {
     background-color: #fff;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 1000;
     padding: 5px 32px;
     margin-top: 0;
 }
@@ -60,6 +60,12 @@ nav ul li a:hover::after{
 
 nav ul i {
     color: #232323;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* -------------header-------------------  */
@@ -330,49 +336,69 @@ nav ul i {
 
 
 /* --------------about------------------  */
+
+#about h1 {
+    opacity: 0;
+}
 .about-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-}
-
-.about-content img {
-    width: 40%;
-    height: 400px;
-    margin-left: 30px;
+    gap: 20px;
 }
 
 .about-right {
-    width: 50%;
+    width: 100%;
 }
+.about-right img{
+    width: 450px;
+    height: 500px;
+}
+
 .about-right p {
-    font-family: 'montserrat', sans-serif;
-    display: inline-block;
-    font-weight: 500;
-    margin: 20px 0;
-}
-
-.p-about {
-    font-size: 2em;
-    text-align: left;
-}
-
-.address {
     background-color: #232323;
-    padding: 5px;
     color: #fff;
-    font-size: 1.3em;
-    padding: 15px;
+    padding: 15px 20px;
+}
+
+.about-right1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes easeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-right1 .about-turn {
+    font-family: "Agu Display", serif;
+    font-size: 6em;
+    margin: 0;
+    animation: easeInAnimation 1s ease-in forwards;
+}
+
+.about-right1 p{
+    font-size: 2em;
 }
 
 .about-bottom {
-    font-size: 2.5em;
+    font-size: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
+
+
+
+
 
 .copyright {
     display: flex;
@@ -452,3 +478,349 @@ nav ul i {
   #suggestions li:hover {
     background-color: #f0f0f0;
   }
+
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    nav {
+        padding: 10px 20px;
+        position: sticky;
+        box-sizing: border-box;
+        top: 0;
+    }
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 40px;
+    }
+
+    .nav-right ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 85px;
+        right: 5%;
+        background-color: #F2F2F2;
+        width: 40%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .nav-right ul.active {
+        display: flex;
+    }
+
+    .title {
+        font-size: 2.5em;
+    }
+    #header {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 0;
+    }
+
+    #header img {
+        margin: 0;
+        width: 80%;
+    }
+
+    #header h1 {
+        margin: 0;
+        position: absolute;
+        top: 45%;
+        left: 2%;
+        color: #fff;
+        font-size: 7em;
+    }
+
+    #header a {
+        margin: 0;
+        position: absolute;
+        top: 65%;
+        right: 23%;
+        background-color: #fff;
+        color: #232323;
+        font-size: 2em;
+        border-radius: 0;
+        font-weight: 600;
+    }
+
+    .category-buttons {
+        margin: 0;
+    }
+    .category-content {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .category {
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+    }
+    .category img {
+        margin: 0;
+        width: 70%;
+    }
+
+    .arrival-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        gap: 30px;
+    }
+
+    .arrival-image {
+        width: 70%;
+        height: 70%;
+    }
+
+    .arrival-list img {
+        width: 100%;
+    }
+
+    .brand-left, .brand-right {
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .brand-left1, .brand-left2 {
+        width: 100%;
+        position: relative;
+    }
+    .brand-image {
+        width: 100%;
+    }
+
+    .brand-left1 h1, .brand-left2 h1 {
+        font-size: 4em;
+    }
+
+    .brand-left1 p, .brand-left2 p {
+        font-size: 2em;
+        top: 60%;
+    }
+
+    .about-content {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .about-content img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .address {
+        font-size: 1.7em;
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    nav {
+        padding: 10px 20px;
+        position: sticky;
+        box-sizing: border-box;
+        top: 0;
+        width: 100%;
+    }
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+
+    .nav-right ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 85px;
+        right: 5%;
+        background-color: #F2F2F2;
+        width: 40%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .nav-right ul.active {
+        display: flex;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+    #header {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 0;
+    }
+
+    #header img {
+        margin: 0;
+        width: 80%;
+    }
+
+    #header h1 {
+        margin: 0;
+        position: absolute;
+        top: 45%;
+        left: 2%;
+        color: #fff;
+        font-size: 4em;
+    }
+
+    #header a {
+        margin: 0;
+        position: absolute;
+        top: 65%;
+        right: 20%;
+        background-color: #fff;
+        color: #232323;
+        font-size: 1em;
+        border-radius: 0;
+        font-weight: 600;
+    }
+
+    .category-buttons {
+        margin: 0;
+    }
+    .category-content {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .category {
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+        gap: 0;
+    }
+    .category img {
+        margin: 0;
+        width: 80%;
+        height: auto;
+    }
+
+    .arrival-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        gap: 30px;
+    }
+
+    .arrival-image {
+        width: 80%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .arrival-list img {
+        width: 100%;
+    }
+
+    .brand-left, .brand-right {
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .brand-left1, .brand-left2 {
+        width: 100%;
+        position: relative;
+    }
+    .brand-image {
+        width: 100%;
+    }
+
+    .brand-left1 h1, .brand-left2 h1 {
+        font-size: 2em;
+    }
+
+    .brand-left1 p, .brand-left2 p {
+        font-size: 1em;
+        top: 60%;
+    }
+
+    .about-content {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .about-content img {
+        width: 100%;
+        height: 300px;
+        margin: 0;
+    }
+
+    .address {
+        font-size: 0.9em;
+        padding: 20px 20px;
+        text-align: center;
+    }
+
+    #about h1 {
+        opacity: 1;
+    }
+    .about-turn {
+        display: none;
+    }
+
+    .about-right1 p {
+        font-size: 1.2em;
+    }
+
+    .about-bottom {
+        font-size: 1.5em;
+    }
+
+    .search-menu {
+        width: 90%;
+        margin: 0;
+        position: absolute;
+        left: 2%;
+    }
+
+    #search-box {
+        width: 80%;
+    }
+}
